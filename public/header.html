@@ -1,0 +1,72 @@
+<header id="header">
+    <div class="header">
+        <div class="black">
+            <ul class="contact">
+                <li>
+                    <i></i>
+                    <a href="index.html">24x7 live support</a>
+                </li>
+                <li>
+                    <i></i>
+                    <a href="index.html">@classicStyle.com</a>
+                </li>
+                <li>
+                    <i></i>
+                    <span>+110&nbsp;223&nbsp;449</span>
+                </li>
+            </ul>
+            
+            <!--登录状态-->
+            <ul class="log_reg" v-if="!islogin">
+                <li>
+                    <a :href="signin">Login</a>
+                </li>
+                <li>
+                    <a href="register.html">Register</a>
+                </li>
+            </ul>
+            <ul class="log_reg" v-else>
+                <li><span v-cloak>welcome: {{uname}}</span></li>
+                <li><a href="javascript:;" @click.prevent="signout">signout</a></li>
+            </ul>
+            <!--end   登录状态  end-->
+            <ul class="shopcar" style="margin-top:12px">
+                <li>
+                    <p @click="jumpCart()">
+                        <span>cart</span>
+                        <img src="img/cart.png" >
+                    </p>
+                </li>
+                
+            </ul>
+        </div>
+
+
+        <div class="white">
+            <h1 class="classic">
+                <a href="#" class="classic">CLASSIC</a>
+                <span>STYLE</span>
+            </h1>
+            
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="#" @click.prevent.stop="toListWoman">Woman</a>
+                    <b></b>
+                </li>
+                <li>
+                    <a href="#" @click.prevent.stop="toListMen">Men</a>
+                    <b></b>
+                </li>
+                <li>
+                    <a href="#">Codes</a>
+                </li>
+                <li>
+                    <a href="#">Contact&nbsp;Us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>

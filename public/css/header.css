@@ -1,0 +1,102 @@
+div.header,.black,.white{
+    width: 100%;
+    text-align: center;
+}
+.black{
+    background: #000;
+    color:#fff;
+    font-size:14px;
+    font-family: "微软雅黑";
+    height:50px;
+    text-align: center;
+}
+.black .contact li,.log_reg li{
+    display:block;
+    margin-left:20px;
+    float:left;
+}
+.black>.contact,.log_reg,.shopcar{
+    display:block;
+    font-weight:bold;
+    /*vertical-align: middle;*/
+    float:left;
+    padding-top:15px;
+}
+.black .log_reg {
+    float: left;
+    margin-left:15%;
+}
+.black .shopcar{
+    padding-top:2px;
+    float:right;
+    margin-right:8%;
+}
+.black .shopcar p{
+    margin-bottom:0;
+}
+.black .contact:first-child{
+    margin-left:8%
+}
+.black  a{
+    color:#fff;
+    text-decoration: none;
+}
+.black a:hover{
+    text-decoration: none;
+    color:#FE5C1D;
+    transition-duration: 1.5s;
+}
+.black:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.white{
+    background:#fff;
+    font-family: "微软雅黑";
+}
+.white:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.white a,.white span,.white ul{
+    display: inline-block;
+}
+.white a{
+    text-decoration: none;
+}
+.white a.classic{
+    font-size: 48px;
+    color:#00CDC9;
+    font-weight: bold;
+    padding-left:10%;
+    float:left;
+}
+.white a.classic:hover{
+    text-decoration: none;
+}
+.white span{
+    font-family: "微软雅黑 Light";
+    font-weight:2;
+    color:#000;
+    font-size:48px;
+    float:left;
+}
+.white ul{
+    margin:22px;
+    margin-left:25%;
+}
+.white ul li{
+    display:inline-block;
+    margin-right:20px;
+}
+.white ul li a{
+    color:#6E6E6E;
+}
+.white ul li a:hover{
+    text-decoration: none;
+    color:#00CDC9;
+    transition-duration:1.5s;
+}

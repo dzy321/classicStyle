@@ -1,0 +1,434 @@
+/*商品列表页的样式*/
+.products_all{
+    margin-top:5rem;
+}
+
+/*左侧4个竖列栏目*/
+.products_left>.d-flex>div{
+    width:100%;
+}
+.products_left>.d-flex>div>h3{
+    width:100%;
+    height:3.5rem;
+    background:#000000;
+    color:white;
+    font-size:24px;
+    text-align: center;
+    line-height: 3.5rem;
+    letter-spacing: 3px;
+}
+/*下拉菜单的设置*/
+.left_menu ul li{
+    font-size:18px;
+    padding-bottom: 1rem;
+}
+.left_menu ul li a{
+    color:#909090;
+    text-decoration: none;
+    padding-left:.8rem;
+}
+.left_menu ul li span{
+    color:#FF5D1E;
+    font-weight:bold;
+    font-size:24px;
+    font-family:"微软雅黑 Light";
+}
+/*价格范围*/
+.left_price>.price_two{
+    width:100%;
+    height:6rem;
+}
+div.price_1,div.price_2{
+
+    border:1px solid #A1A1A1;
+    margin:1.5rem 0;
+}
+
+.left_price>.price_two span{
+    display:inline-block;
+    padding:3px 6px;
+}
+.left_price>.price_two input{
+    border:none;
+    border-left:1px solid #A1A1A1;
+    outline:none;
+    width:75%;
+    padding:3px 6px;
+}
+/*8个颜色方块*/
+.left_color ul{
+    margin:30px 0;
+}
+.left_color ul li{
+    list-style: none;
+    display:inline-block;
+    margin:5px 0;
+}
+.left_color ul li a i{
+    width:30px;
+    height:30px;
+    display:block;
+    border:1px solid #8c8c8c;
+    margin-right:15px;
+}
+.left_color ul li a i.c1{
+    background:#D3017A;
+}
+.left_color ul li a i.c2{
+    background:#5DB73B;
+}
+.left_color ul li a i.c3{
+    background:#FD9142;
+}
+.left_color ul li a i.c4{
+    background:#154D81;
+}
+.left_color ul li a i.c5{
+    background:#FFFFFF;
+}
+.left_color ul li a i.c6{
+    background:#4CB1EF;
+}
+.left_color ul li a i.c7{
+    background:#FB0134;
+}
+.left_color ul li a i.c8{
+    background:#51358D;
+}
+/*销售冠军*/
+.best_sell{
+    width:100%;
+    margin-top:2rem;
+}
+.best_img{
+    width:24%;
+    float:left;
+}
+.best_right{
+    width:70%;
+    float:right;
+}
+.best_sell::after{
+    content:"";
+    display:block;
+    clear:both;
+}
+.best_sell a img{
+    width:100%;
+}
+/*销售冠军的文字部分*/
+.best_right a：hover{
+    text-decoration: none;
+}
+.best_right a h6{
+    font-size:1.5em;
+    color:#00CDC9;
+    font-weight:bold;
+}
+.best_right p s{
+    color:#999;
+    margin-right:0.5em;
+}
+.best_right>p>span{
+    font-size:1.2rem;
+    color:#000;
+}
+.best_right p{
+    color:#999;
+}
+.best_right .best_detail{
+    margin-top:-1em;
+}
+
+
+
+/*右侧的上面部分*/
+/*图片部分*/
+.bigPic{
+    width:292px;
+    height:364px;
+    border:1px solid #CCC9CA;
+    margin:auto;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.basic-pic,.mask,.lg-pic{
+    width:290px;
+    height:360px;
+    position: absolute;
+}
+
+.mask{
+    opacity:0;
+    z-index:2
+}
+.lg-pic{
+    left:300px;
+    z-index:1000;
+    border:1px solid rgba(0,0,0,0.125);
+
+    background-size: 580px 720px;
+    
+}
+
+.sup-mask{
+    position: absolute;
+    width:145px;
+    height:180px;
+    background:lightgray;
+    opacity:0.5;
+}
+.bigPic .basic-pic img{
+    width:100%;
+    height:100%;
+}
+
+
+ul.smallPic {
+    list-style: none;
+    width:90%;
+    margin:3px auto;
+}
+ul.smallPic li{
+    width:30%;
+    display:inline-block;
+    border:1px solid #CCC9CA;
+    margin:2px;
+}
+ul.smallPic li img{
+    width:100%;
+}
+
+
+
+/*文字部分*/
+.detail-text h3{
+    font-weight:700;
+    font-size:1.8em;
+}
+.detail-text>p{
+    padding:1em 0;
+    margin:1em 0;
+    border-top:3px double #f0f0f0;
+    border-bottom:1px solid #f0f0f0;
+    color:#999;
+}
+.detail-text>div.atc:after{
+    content:"";
+    display:block;
+    clear:both;
+}
+.detail-text div span{
+    display:inline-block;
+    float:left;
+    font-size:1.7em;
+    color:#01fcfc;
+    font-weight: 500;
+}
+.detail-btn{
+    display:flex;
+    justify-content: space-between;
+}
+.detail-btn input{
+    width:30px;
+    padding:0 5px;
+}
+.detail-btn button{
+    width:20px;
+}
+.detail-text .atc .add-btn{
+
+    float:right;
+    background:#ff7000;
+    font-size:1em;
+    color: #ffffff;
+    height:35px;
+    line-height:35px;
+    margin-top:40px;
+    padding:0 0.6em;
+    margin-bottom: 30px;
+}
+
+/*文字部分的伸缩菜单部分*/
+.detail-text>div>ul{
+    list-style: none;
+    padding:0;
+    margin:0;
+    background:#ececec;
+}
+.detail-text>div>ul.tabs>li{
+    display:inline-block;
+
+
+}
+.detail-text>div>ul.tabs>li>a{
+    display:inline-block;
+    color:#444444;
+    font-size:1.2em;
+    padding:0.5rem 1rem;
+    text-decoration: none;
+}
+.detail-text>div>ul.tabs>li>a:focus{
+    background-color:#ff7000;
+    color:#fff;
+}
+/*隐藏菜单*/
+#contentAll{
+    width:100%;
+    margin-top:0.5rem;  
+}
+
+#content1,#content2,#content3{
+    margin-top:.5rem;
+    background-color:#fff;
+    height:20rem;
+    width:100%;
+    display:none;
+}
+#content1{
+    display:block;
+}
+#content1 p,#content1 ul li{
+    color:#999;
+    font-size:1.1rem;
+    margin-top:0.4rem;
+}
+#content2 div{
+    width:100%;
+    height:4rem;
+    margin:1rem 0;
+    padding:0.5rem;
+    background-color:#eee;
+}
+#content2 div span{
+    line-height: 3rem;
+    display:inline-block;
+    color:#999;
+    font-size:1.1rem;
+}
+#content2 div span:first-child{
+    font-size:1.3rem;
+}
+
+#content3>div>div:first-child{
+    width:13%;
+    float:left;
+}
+#content3>div>div>img{
+    width:100%;
+}
+#content3>div>div:nth-child(2){
+    float:left;
+    margin-left:4rem;
+}
+#content3>div:after{
+    content:"";
+    display:block;
+    clear:both;
+}
+#content3 h6{
+    font-size:0.9rem;
+}
+#content3 h6>span{
+    font-size:1.3rem;
+    font-weight: bold;
+}
+#content3>a{
+    text-decoration: none;
+    display:block;
+    background:#01fcfc;
+    width:28%;
+    height:2rem;
+    line-height:1rem;
+    padding:0.5rem 0.6rem;
+    color:#fff;
+    font-size:1.2rem;
+    font-weight:500;
+    margin-top:3rem;
+}
+
+/*右侧商品列表卡片部分的设置*/
+.products_left{
+    width:100%;
+}
+.card_row{
+    width:100%;
+    display: flex;
+    justify-content:space-between ;
+    padding:2% 0;
+}
+.my-card{
+    width:30%;
+    height:80%;
+    box-shadow:0 0 10px rgba(0,0,0,0.15) ;
+    text-align: center;
+}
+.my-card-a{
+    display: block;
+    width:65%;
+    margin:0 auto;
+    margin-top: 1.8rem;
+    position: relative;
+    overflow: hidden;
+}
+.my-card-a img{
+    max-width:100%;
+}
+.my-card-a .my-card-img{
+    position:absolute;
+    transition: transform 0.8s ease-out;
+}
+.my-card-img:hover{
+    transform:translateX(-100%) ;
+}
+/*三个卡片--文字部分*/
+.my-card ul{
+    width:80%;
+    margin:0 auto 1rem;
+}
+.my-card ul .my-card-title a{
+    color:#00CDC9;
+    font-size:18px;
+
+}
+li.my-card-title>a:hover{
+    color:black;
+    text-decoration: none;
+}
+.my-card-btn{
+    width:65%;
+    margin:0 auto;
+    position:relative;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+.my-card-btn a{
+    width:100%;
+    line-height: 2rem;
+    display: block;
+    background:#00CDC9;
+    color:#fff;
+}
+.my-card-btn>a:hover{
+    color:#fff;
+    text-decoration: none;
+
+}
+a.my-card-btn-orange{
+    background:#FF5C1D;
+    position:absolute;
+    transition:transform 0.5s ease-out;
+}
+.my-card-btn-orange:hover{
+    transform:translateY(100%);
+}
+
+
+
+
+
+
+
+
+

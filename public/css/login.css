@@ -1,0 +1,90 @@
+/*section*/
+/*section_top 因为要共用，写到base.css去了*/
+
+/*table_part*/
+.table_part{
+    width:100%;
+    display:flex;
+    flex-flow: row nowrap;
+    justify-content:center;
+}
+.table_part>.table_left,.table_right{
+    display: inline-block;
+    width:37%;
+    padding-top:80px;
+}
+.table_part .table_left{
+    margin-right:40px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+}
+.table_left div{
+    padding:10px;
+    border:1px solid #E6E6E6;
+    width:100%;
+    height:45px;
+    margin-bottom:30px;
+}
+.table_left input{
+    width:100%;
+    border: none;
+    outline:none;
+}
+.table_left .forget{
+    border:none;
+    line-height: 25px;
+    font-weight:bold;
+    padding-left:0;
+}
+.table_left .forget .if_tick{
+    width: 18px;
+    height:18px;
+    display:inline-block;
+    border:1px solid #DDDBDB;
+
+}
+.forget a{
+    color:#4E4E4E;
+    text-decoration: none;
+}
+.forget a:hover{
+    text-decoration: none;
+    color:#4E4E4E;
+}
+.table_right{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+}
+.table_right input{
+    outline: none;
+    border: none;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    height:35px;
+    cursor: pointer;
+    color:#FFF7F3;
+}
+input.btn-login{
+    background: #00CDC9;
+}
+input.btn-signup{
+    background:#ff7000;
+}
+.table_right p{
+    color:#A4A4A4;
+    line-height:12px;
+    margin-top:15px;
+}
+
+
+
+
+
+
+
+
+
+

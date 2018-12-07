@@ -1,0 +1,128 @@
+/*cartSection:总的部分*/
+.cartSection{
+    margin-top:4em;
+}
+.cartSection:after{
+    content:"";
+    display:block;
+    clear:right;
+}
+/*cart结算表*/
+#cartData{
+    width:100%;
+    
+}
+#cartData thead{
+    background:#00CDC9;
+}
+#cartData thead tr th input{
+    float:left;
+    margin:20px 40px 0 30px;
+}
+
+#cartData input[type="checkbox"]{
+    width:20px;
+    height:20px;
+    display:inline-block;
+    
+}
+#cartData thead tr{
+    padding:0.8em;
+}
+#cartData thead tr th{
+    color:#fff;
+    font-size:2rem;
+    font-weight: 400;
+    height:2.5em;
+    text-align:left;
+}
+#cartData .cartCheck{
+    float:left;
+    margin:60px 30px 0 30px;
+    
+}
+#cartData .cartItem{
+    float:left;
+}
+#cartData .cartItem .cartItemImg{
+    width:100px;
+}
+#cartData .itemCount{
+    border-style: none;
+    width:30px;
+    height:30px;
+    text-align: center;
+    font-size:20px;
+    
+}
+#cartData>tbody>tr{
+    border-bottom:1px solid #ccc;
+}
+#cartData>tbody>tr>td>div{
+    margin:1rem;
+}
+#cartData>tbody>tr>td>div>div{
+    display:inline-block;
+    margin-left: 1rem;
+}
+#cartData>tbody>tr>td>div>div>img{
+    float:right;
+}
+#cartData>tbody>tr>td>div>div>p{
+    clear:right;
+    font-size:1.5rem;
+    font-weight:500;
+}
+#cartData>tbody>tr>td>button{
+    width:2.5rem;
+    height:2.5rem;
+    border:1px solid #1b1e21;
+    background-color: #fff;
+    font-size:2rem;
+    line-height:2rem;
+    padding-bottom: 0.2rem;
+    outline:none;
+}
+#cartData>tbody>tr>td>span{
+    display:inline-block;
+    background: #E2E2E2;
+    width:2.5rem;
+    height:2.5rem;
+    text-align: center;
+    vertical-align: middle;
+    line-height:2.5rem;
+    margin-top:-1rem;
+}
+#cartData>tbody>tr>td>div>div>img,#cartData button{
+    cursor: pointer;
+}
+
+/*cartCard的总计部分*/
+.cartCard{
+    float:right;
+}
+.cartCard>h1{
+    margin-bottom:1.5rem;
+}
+.cartCard>h5{
+    margin-bottom:1rem;
+}
+.totalTr{
+    font-size:1.2rem;
+}
+.cartCard>a{
+    display:block;
+    color:#fff;
+    background-color:#FF5C1D;
+    height:2.5rem;
+    width:75%;
+    text-align: center;
+    font-size:1rem;
+    margin-top:2rem;
+    line-height:2.5rem;
+    transition:background-color 1s
+}
+.cartCard>a:hover{
+    text-decoration: none;
+    background-color:#00CDC9;
+}

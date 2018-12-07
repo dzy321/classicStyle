@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/products.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/header.js"></script>
+</head>
+<body>
+  <div class="myContainer">
+      <!--header-->
+      <header id="header"></header>
+
+    <!--section-->
+      <!--section_top:顶部图片-->
+      <div class="section_top">
+          <div class="left">PRODUCTS</div>
+          <div class="right">
+              <a href="index.html">Home</a>
+              <span>&nbsp;/&nbsp;Products / Women's</span>
+          </div>
+      </div>
+
+      <!--section_body-->
+      <div class="container products_all">
+          <div class="row">
+              <!--左边的下拉菜单-->
+              <div class="col-3 products_left">
+                  <div class="d-flex flex-column">
+                      <!--下拉菜单-->
+                      <div class="left_menu">
+                          <h3>CATEGORIES</h3>
+                          <ul>
+                              <li><span>&gt;</span><a href="#">Best Selling(15)</a></li>
+                              <li class="dropdown">
+                                  <span>&gt;</span><a href="#" data-toggle="dropdown">Men(16)</a>
+                                  <ul class="dropdown-menu" style="padding:20px;">
+                                      <li><span>&gt;</span><a href="#">Accessories (2)</a></li>
+                                      <li><span>&gt;</span><a href="#">Coats & Jackets (5)</a></li>
+                                      <li><span>&gt;</span><a href="#">Jeans (1)</a></li>
+                                      <li><span>&gt;</span><a href="#">New Arrivals (0)</a></li>
+                                      <li><span>&gt;</span><a href="#">Suits (1)</a></li>
+                                      <li><span>&gt;</span><a href="#">Casual Shirts (0)</a></li>
+                                  </ul>
+                              </li>
+                              <li><span>&gt;</span><a href="#">Sales (15)</a></li>
+                              <li class="dropdown">
+                                  <span>&gt;</span><a href="#" data-toggle="dropdown">Women(15)</a>
+                                  <ul class="dropdown-menu" style="padding:20px">
+                                      <li><span>&gt;</span><a href="#">Accessories (2)</a></li>
+                                      <li><span>&gt;</span><a href="#">New Arrivals (0)</a></li>
+                                      <li><span>&gt;</span><a href="#">Dresses (1)</a></li>
+                                      <li><span>&gt;</span><a href="#">Casual Shirts (0)</a></li>
+                                      <li><span>&gt;</span><a href="#">Shorts (4)</a></li>
+                                  </ul>
+                              </li>
+                          </ul>
+                      </div>
+                      <!--价格范围-->
+                      <div class="left_price">
+                          <h3>PRICE RANGE</h3>
+                          <div class="price_two row">
+                              <div class="col-6">
+                                  <div class="price_1"><span>$</span><input type="text"></div>
+                              </div>
+                              <div class="col-6">
+                                  <div class="price_2"><span>$</span><input type="text"></div>
+                              </div>
+                          </div>
+                      </div>
+                      <!--颜色-->
+                      <div class="left_color">
+                          <h3>COLORS</h3>
+                          <ul>
+                              <li><a href="#"><i class="c1"></i></a></li>
+                              <li><a href="#"><i class="c2"></i></a></li>
+                              <li><a href="#"><i class="c3"></i></a></li>
+                              <li><a href="#"><i class="c4"></i></a></li>
+                              <li><a href="#"><i class="c5"></i></a></li>
+                              <li><a href="#"><i class="c6"></i></a></li>
+                              <li><a href="#"><i class="c6"></i></a></li>
+                              <li><a href="#"><i class="c7"></i></a></li>
+                          </ul>
+                      </div>
+                      <!--销售冠军-->
+                      <div class="left_best">
+                          <h3>BEST SELLERS</h3>
+                          <div class="best_sell">
+                              <div class="best_img">
+                                  <a href="#"><img src="img/pcc.jpg"></a>
+                              </div>
+                              <div class="best_right">
+                                  <a href="#"><h6>Lorem ipsum</h6></a>
+                                  <p><s>$50</s><span>$40</span></p>
+                                  <p class="best_detail">The standard chunk of Lorem Ipsum used</p>
+                              </div>
+                          </div>
+                          <div class="best_sell">
+                              <div class="best_img">
+                                  <a href="#"><img src="img/pcc1.jpg"></a>
+                              </div>
+                              <div class="best_right">
+                                  <a href="#"><h6>Lorem ipsum</h6></a>
+                                  <p><s>$50</s><span>$40</span></p>
+                                  <p class="best_detail">The standard chunk of Lorem Ipsum used</p>
+                              </div>
+                          </div>
+
+
+
+                      </div>
+
+
+
+
+                  </div>
+              </div>
+              <!--右边的列表-->
+              <div class="col-9 products_right">
+                  
+
+                  <!--右边主体的商品列表-->
+                  <div class="products_list" id="product-list">
+                        <div class="my-card" v-for="item of list" >
+                            <a href="#" class="my-card-a" @click.prevent.stop="toDetails(item.cid)">
+                                <img :src="item.fpic" class="my-card-img">
+                                <img :src="item.bpic">
+                            </a>
+                            <ul class="mt-3">
+                                <li>
+                                    <a href="#"><img src="img/ll.png"></a>
+                                </li>
+                                <li class="my-card-title">
+                                    <a href="#">{{item.title}}</a>
+                                </li>
+                                <li class="mt-1 mb-2">
+                                   <b>${{item.price}}</b>
+                                </li>
+                                <li>
+                                    <div class="my-card-btn">
+                                        <a href="#" class="my-card-btn-orange">Add To Cart</a>
+                                        <a href="#">Add To Cart</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <!--section_bottom-->
+      <div class="section_bottom">
+          <div>
+              <a href="#">FACEBOOK</a>
+          </div>
+          <div>
+              <a href="#">TWITTER</a>
+          </div>
+          <div>
+              <a href="3">GOOGLE+</a>
+          </div>
+          <div>
+              <a href="#">PINTEREST</a>
+          </div>
+      </div>
+
+       <!--footer-->
+    <div class="footer">
+        <div class="footer_top">
+            <div class="footer_top_left">
+                <h4 class="footer_title">
+                    Provide you with all new things in fashion 
+                </h4>
+                <p>
+                    We provide a wide range of brand apparel and accessories series to meet the needs of various styles and occasions. Committed to creating the perfect fashion shopping experience, top-level customer service goes hand in hand.
+                </p>
+            </div>
+            <div class="footer_top_right">
+                <input type="button" value="Contact Us">
+            </div>
+        </div>
+        <div class="footer_middle">
+            <div class="row">
+                <div class="footer_middle_left col-lg-4">
+                <h3 class="footer_title">About Us</h3>
+                <p>As the leading online retail outlet</p>
+                <p>As the leading online retail outletwe provides a comprehensive selection of clothing series and accessories from modern fashion frontiers and brands.</p>
+            </div>
+                <div class="footer_middle_center col-lg-4">
+                <h3 class="footer_title">Contact Info</h3>
+                <ul>
+                    <li class="footer_address">
+                        <i>#</i>&nbsp;&nbsp;1234k Avenue, 4th block,<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;New York City.
+                    </li>
+                    <li>
+                        <i>#</i>&nbsp;&nbsp;info@example.com
+                    </li>
+                    <li>
+                        <i>#</i>&nbsp;&nbsp;+1234 567 567
+                    </li>
+                </ul>
+                </div>
+                <div class="footer_middle_right col-lg-4">
+                <h3 class="footer_title">Sign up for newsletter</h3>
+                <input type="email" placeholder="Email" class="footer_email"><input type="submit" value="SUBMIT" class="footer_submit">
+            </div>
+            </div>
+        </div>
+        <div class="footer_bottom">
+            <p>
+                Copyright&nbsp;&copy;2018.Company&nbsp;name&nbsp;All&nbsp;rights&nbsp;reserved.
+            </p>
+            <br>
+        </div>
+    </div>
+
+  </div>
+<script src="js/products.js"></script>
+</body>
+</html>
